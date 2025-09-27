@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS Selector Forms Example</title>
+
+<style>
+  p {
+    color: darkblue;
+  }
+
+  #unique {
+    font-weight: bold;
+  }
+
+  .highlight {
+    background-color: yellow;
+  }
+
+  h1, h2 {
+    font-family: 'Arial Black', Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  div span {
+    color: green;
+  }
+
+  ul > li {
+    list-style-type: square;
+  }
+
+  h2 + p {
+    font-style: italic;
+  }
+
+  h1 ~ p {
+    border-left: 3px solid orange;
+    padding-left: 10px;
+  }
+
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+
+  h1::before {
+    content: "★ ";
+    color: gold;
+  }
+
+  p::after {
+    content: " ✔";
+    color: green;
+  }
+
+  input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+  }
+
+  a[title] {
+    font-weight: bold;
+  }
+
+</style>
+
+</head>
+<body>
+
+<h1>Heading One</h1>
+<h2>Heading Two</h2>
+
+<p>This paragraph is styled by the <code>p</code> element selector.</p>
+<p id="unique">This paragraph has an <code>id="unique"</code> and is bold.</p>
+<p class="highlight">This paragraph has a <code>class="highlight"</code> with yellow background.</p>
+
+<div>
+  <span>This span inside a div is green because of the descendant selector.</span>
+</div>
+
+<ul>
+  <li>Child item 1</li>
+  <li>Child item 2</li>
+  <li>Child item 3</li>
+</ul>
+
+<h2>Subheading</h2>
+<p>This paragraph immediately follows the <code>&lt;h2&gt;</code> and is italic (adjacent sibling).</p>
+
+<h1>Another Heading One</h1>
+<p>This paragraph is a general sibling of the above <code>&lt;h1&gt;</code> and has an orange left border.</p>
+<p>Another sibling paragraph with the same style.</p>
+
+<a href="#" title="Tooltip example">This link has a title attribute and is bold</a><br />
+<a href="#">This link has no title and is normal</a><br />
+
+<input type="text" placeholder="Text input with blue border" />
+<input type="password" placeholder="Password input with default style" />
+
+</body>
+</html>
