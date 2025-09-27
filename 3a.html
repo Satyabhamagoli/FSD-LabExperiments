@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semantic HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, footer, nav, main, section, article, aside {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        figure {
+            margin: 0;
+        }
+        .highlight {
+            color: darkblue;
+            font-weight: bold;
+        }
+        .note {
+            background: #f9f9f9;
+            padding: 10px;
+            font-style: italic;
+            border-left: 4px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Awesome Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"><span>Home</span></a></li>
+                <li><a href="#about"><span>About</span></a></li>
+                <li><a href="#contact"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <article>
+                <header>
+                    <h2>Welcome to Our Site</h2>
+                    <p><span class="highlight">Discover</span> amazing content and stories.</p>
+                </header>
+                <figure>
+                    <img src="https://via.placeholder.com/600x300" alt="Sample image" />
+                    <figcaption>Our site homepage banner image</figcaption>
+                </figure>
+                <p>This is an introductory article explaining the purpose of our website.</p>
+            </article>
+
+            <aside class="note">
+                <h3>Did you know?</h3>
+                <p>Our site has been online since 2020 and has served thousands of visitors worldwide.</p>
+            </aside>
+        </section>
+
+        <section id="about">
+            <article>
+                <header>
+                    <h2>About Us</h2>
+                </header>
+                <p>We are a team of passionate developers and content creators.</p>
+
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>To provide <span class="highlight">high-quality</span> and accessible information for everyone.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
