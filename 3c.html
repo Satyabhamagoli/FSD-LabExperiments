@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Styles Example: Inline, Internal, External</title>
+
+    <style>
+        h2 {
+            color: darkgreen;
+        }
+
+        .internal-paragraph {
+            font-style: italic;
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <h1 style="color: blue; text-align: center;">
+        Inline Styled Heading (Blue, Centered)
+    </h1>
+
+    <h2>
+        Internal Styled Heading (Dark Green)
+    </h2>
+
+    <p class="internal-paragraph">
+        This paragraph uses <span style="font-weight: bold; color: red;">inline styles</span> inside it.
+    </p>
+
+    <p class="external-paragraph">
+        This paragraph is styled using <strong>external CSS</strong>.
+    </p>
+
+</body>
+</html>
