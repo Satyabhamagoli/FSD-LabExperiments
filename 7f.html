@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working of RegExp Object</title>
+</head>
+<body>
+  <h2>RegExp Object Example</h2>
+  <p id="res"></p>
+  <script>
+    var text = "Learning JavaScript is fun!";
+    var pattern = /JavaScript/;
+    var result = pattern.test(text);  
+    var match = text.match(pattern);  
+    document.getElementById("res").innerHTML =
+      "Text: " + text + "<br>" +
+      "Pattern: /JavaScript/<br>" +
+      "Pattern Found? " + result + "<br>" +
+      "Matched Word: " + match;
+  </script>
+</body>
+</html>
