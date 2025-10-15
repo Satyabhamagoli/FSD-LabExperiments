@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working of User-defined Object</title>
+</head>
+<body>
+  <h2>User-defined Object Example</h2>
+  <p id="output"></p>
+
+  <script>
+    function Student(name, age, marks) {
+      this.name = name;
+      this.age = age;
+      this.marks = marks;
+      this.display = function() {
+        return "Name: " + this.name + ", Age: " + this.age + ", Marks: " + this.marks;
+      };
+      this.getGrade = function() {
+        return this.marks >= 50 ? "Pass" : "Fail";
+      };
+    }
+    var student1 = new Student("Satya", 20, 85);
+    var student2 = new Student("Hema", 20, 88);
+    document.getElementById("output").innerHTML =
+      student1.display() + " | Grade: " + student1.getGrade() + "<br>" +
+      student2.display() + " | Grade: " + student2.getGrade();
+  </script>
+</body>
+</html>
