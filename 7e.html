@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working of String Object</title>
+</head>
+<body>
+  <h2>String Object Example</h2>
+  <p id="output"></p>
+
+  <script>
+    var text = "JavaScript is Powerful!";
+    var length = text.length;
+    var upper = text.toUpperCase();
+    var lower = text.toLowerCase();
+    var replaced = text.replace("Powerful", "Awesome");
+    var sub = text.substring(0, 10);
+
+    document.getElementById("output").innerHTML =
+      "Original Text: " + text + "<br>" +
+      "Length: " + length + "<br>" +
+      "Uppercase: " + upper + "<br>" +
+      "Lowercase: " + lower + "<br>" +
+      "Replaced: " + replaced + "<br>" +
+      "Substring (0–10): " + sub;
+  </script>
+</body>
+</html>
