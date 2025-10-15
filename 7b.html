@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Working of Window Object</title>
+</head>
+<body>
+  <h2>Window Object Example</h2>
+  <button onclick="openWindow()">Open New Window</button>
+  <button onclick="closeWindow()">Close New Window</button>
+  <p id="info"></p>
+
+  <script>
+    document.getElementById("info").innerHTML = 
+      "Inner Width: " + window.innerWidth + "px<br>" +
+      "Inner Height: " + window.innerHeight + "px<br>";
+    var newWin;
+    function openWindow() {
+      newWin = window.open("", "_blank", "width=300,height=200");
+      newWin.document.write("<h3>This is a new window!</h3>");
+    }
+    function closeWindow() {
+      if (newWin) newWin.close();
+    }
+  </script>
+</body>
+</html>
