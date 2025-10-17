@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Denomination</title>
+</head>
+<body>
+    <h3><b>Display Bank Denominations</b></h3>
+    <button onclick="showDenominations()">Enter Amount</button>
+    <p id="result"></p>
+    <script>
+        function showDenominations() {
+            let amount = parseInt(prompt("Enter the amount:"));
+            let original = amount;
+            let output = "";
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById("result").innerHTML = "Please enter a valid amount.";
+                return;
+            }
+            let hundreds = Math.floor(amount / 100);
+            amount %= 100;
+            let fifties = Math.floor(amount / 50);
+            amount %= 50;
+            let twenties = Math.floor(amount / 20);
+            amount %= 20;
+            let tens = Math.floor(amount / 10);
+            amount %= 10;
+            let fives = Math.floor(amount / 5);
+            amount %= 5;
+            let twos = Math.floor(amount / 2);
+            amount %= 2;
+            let ones = amount; 
+            output += "Amount: ₹" + original + "<br><br>";
+            if (hundreds) output += hundreds + " × ₹100<br>";
+            if (fifties) output += fifties + " × ₹50<br>";
+            if (twenties) output += twenties + " × ₹20<br>";
+            if (tens) output += tens + " × ₹10<br>";
+            if (fives) output += fives + " × ₹5<br>";
+            if (twos) output += twos + " × ₹2<br>";
+            if (ones) output += ones + " × ₹1<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
