@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations</title>
+</head>
+<body>
+    <h3><b>Number Operations</b></h3>
+    <label>Enter a number:</label>
+    <input type="number" id="num" placeholder="Enter number">
+    <br><br>
+    <button onclick="showFactorial()">Factorial</button>
+    <button onclick="showFibonacci()">Fibonacci</button>
+    <button onclick="showPrime()">Prime</button>
+    <button onclick="showPalindrome()">Palindrome</button>
+    <p id="result"></p>
+    <script>
+        function getNumber() {
+            let num = parseInt(document.getElementById("num").value);
+            if (isNaN(num) || num <= 0) {
+                document.getElementById("result").innerHTML = "Please enter a valid positive number.";
+                return null;
+            }
+            return num;
+        }
+        function showFactorial() {
+            let num = getNumber();
+            if (num === null) return;
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.getElementById("result").innerHTML = "Factorial of " + num + " = " + fact;
+        }
+        function showFibonacci() {
+            let num = getNumber();
+            if (num === null) return;
+            let series = [0, 1];
+            while (true) {
+                let next = series[series.length - 1] + series[series.length - 2];
+                if (next > num) break;
+                series.push(next);
+            }
+            document.getElementById("result").innerHTML = "Fibonacci series up to " + num + ":<br>" + series.join(", ");
+        }
+        function showPrime() {
+            let num = getNumber();
+            if (num === null) return;
+            let primes = [];
+            for (let i = 2; i <= num; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            document.getElementById("result").innerHTML = "Prime numbers up to " + num + ":<br>" + primes.join(", ");
+        }
+        function showPalindrome() {
+            let num = getNumber();
+            if (num === null) return;
+            let str = num.toString();
+            let rev = str.split("").reverse().join("");
+            if (str === rev) {
+                document.getElementById("result").innerHTML = num + " is a Palindrome Number.";
+            } else {
+                document.getElementById("result").innerHTML = num + " is NOT a Palindrome Number.";
+            }
+        }
+    </script>
+</body>
+</html>
