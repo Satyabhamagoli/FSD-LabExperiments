@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations</title>
+</head>
+<body>
+    <h3><b>Number Operations</b></h3>
+    <button onclick="performOperations()">Enter Number</button>
+    <p id="result"></p>
+
+    <script>
+        function performOperations() {
+            let num = parseInt(prompt("Enter a number:"));
+            let output = "";
+
+            if (isNaN(num) || num <= 0) {
+                document.getElementById("result").innerHTML = "Please enter a valid positive number.";
+                return;
+            }
+
+            output += "<b>1️⃣ Factorial of " + num + ":</b><br>" + factorial(num) + "<br><br>";
+            output += "<b>2️⃣ Fibonacci Series up to " + num + ":</b><br>" + fibonacci(num).join(", ") + "<br><br>";
+            output += "<b>3️⃣ Prime Numbers up to " + num + ":</b><br>" + primeNumbers(num).join(", ") + "<br><br>";
+
+            if (isPalindrome(num)) {
+                output += "<b>4️⃣ " + num + " is a Palindrome Number.</b>";
+            } else {
+                output += "<b>4️⃣ " + num + " is NOT a Palindrome Number.</b>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        function fibonacci(n) {
+            let series = [0, 1];
+            while (true) {
+                let next = series[series.length - 1] + series[series.length - 2];
+                if (next > n) break;
+                series.push(next);
+            }
+            return series;
+        }
+
+        function primeNumbers(n) {
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            return primes;
+        }
+
+        function isPalindrome(n) {
+            let str = n.toString();
+            let rev = str.split("").reverse().join("");
+            return str === rev;
+        }
+    </script>
+</body>
+</html>
