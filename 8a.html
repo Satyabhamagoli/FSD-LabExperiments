@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Largest Number</title>
+</head>
+<body>
+    <h3><b>Find Largest Number</b></h3>
+    <button onclick="findLargest()">Enter Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function findLargest() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            let num3 = parseFloat(prompt("Enter third number:"));
+
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+                return;
+            }
+
+            let largest;
+
+            if (num1 >= num2 && num1 >= num3) {
+                largest = num1;
+            } else if (num2 >= num1 && num2 >= num3) {
+                largest = num2;
+            } else {
+                largest = num3;
+            }
+
+            document.getElementById("result").innerHTML = largest + " LARGER NUMBER";
+        }
+    </script>
+</body>
+</html>
+
