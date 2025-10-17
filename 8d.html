@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Object Data using Different Loops</title>
+</head>
+<body>
+    <h3><b>Display Object Data using for-in, forEach and for-of Loops</b></h3>
+    <button onclick="showData()">Show Data</button>
+    <p id="result"></p>
+    <script>
+        function showData() {
+            const student = {
+                name: "Satya",
+                age: 21,
+                course: "Computer Engineering",
+                city: "Vijayawada"
+            };
+            let output = "";
+            output += "<b>Using for-in loop:</b><br>";
+            for (let key in student) {
+                output += key + ": " + student[key] + "<br>";
+            }
+            output += "<br><b>Using forEach loop:</b><br>";
+            const values = Object.values(student); 
+            values.forEach(function(value) {
+                output += value + "<br>";
+            });
+            output += "<br><b>Using for-of loop:</b><br>";
+            for (let value of values) {
+                output += value + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
