@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print 1 to 10 Numbers</title>
+</head>
+<body>
+    <h3><b>Print 1 to 10 Numbers using Different Loops</b></h3>
+
+    <button onclick="showNumbers()">Click to Display</button>
+    <p id="result"></p>
+
+    <script>
+        function showNumbers() {
+            let output = "";
+            output += "<b>Using for loop:</b><br>";
+            for (let i = 1; i <= 10; i++) {
+                output += i + " ";
+            }
+            output += "<br><br><b>Using while loop:</b><br>";
+            let j = 1;
+            while (j <= 10) {
+                output += j + " ";
+                j++;
+            }
+            output += "<br><br><b>Using do-while loop:</b><br>";
+            let k = 1;
+            do {
+                output += k + " ";
+                k++;
+            } while (k <= 10);
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
