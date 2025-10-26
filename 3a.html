@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Semantic HTML Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        header, footer, nav, main, section, article, aside {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-        nav ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        nav ul li {
-            display: inline-block;
-            margin-right: 15px;
-        }
-        figure {
-            margin: 0;
-        }
-        .highlight {
-            color: darkblue;
-            font-weight: bold;
-        }
-        .note {
-            background: #f9f9f9;
-            padding: 10px;
-            font-style: italic;
-            border-left: 4px solid #ccc;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>K.S Chithra - Semantic HTML Example</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header, footer { background: #333; color: white; padding: 15px; text-align: center; }
+nav { background: #555; padding: 10px; }
+nav a { color: white; margin: 0 10px; text-decoration: none; }
+main { display: flex; margin: 20px; }
+article { flex: 3; padding: 15px; background: #f9f9f9; margin-right: 20px; border-radius:
+8px; }
+aside { flex: 1; padding: 15px; background: #f1f1f1; border-radius: 8px; }
+figure { text-align: center; margin: 20px 0; }
+figcaption { font-size: 14px; color: gray; }
+section { margin-bottom: 20px; }
+.highlight { color: rgb(13, 35, 45); font-weight: bold; }
+a { color: blue; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>My Awesome Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home"><span>Home</span></a></li>
-                <li><a href="#about"><span>About</span></a></li>
-                <li><a href="#contact"><span>Contact</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <article>
-                <header>
-                    <h2>Welcome to Our Site</h2>
-                    <p><span class="highlight">Discover</span> amazing content and stories.</p>
-                </header>
-                <figure>
-                    <img src="https://via.placeholder.com/600x300" alt="Sample image" />
-                    <figcaption>Our site homepage banner image</figcaption>
-                </figure>
-                <p>This is an introductory article explaining the purpose of our website.</p>
-            </article>
-
-            <aside class="note">
-                <h3>Did you know?</h3>
-                <p>Our site has been online since 2020 and has served thousands of visitors worldwide.</p>
-            </aside>
-        </section>
-
-        <section id="about">
-            <article>
-                <header>
-                    <h2>About Us</h2>
-                </header>
-                <p>We are a team of passionate developers and content creators.</p>
-
-                <div>
-                    <h3>Our Mission</h3>
-                    <p>To provide <span class="highlight">high-quality</span> and accessible information for everyone.</p>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
-    </footer>
+<header>
+<h1>K.S Chithra - Telugu Singer</h1>
+<p>Exploring the life and works of K.S Chithra</p>
+</header>
+<nav></nav>
+<a href="#bio">Biography</a>
+<a href="#works">Works</a>
+<a href="#links">Links</a>
+</nav>
+<main>
+<article id="bio">
+<header>
+<h2>Biography of K.S Chitra</h2>
+<p><span class="highlight">Author:</span>K.S Chithra</p>
+</header>
+<section>
+<p>
+THIRUVANANTHAPURAM: Singer KS Chithra's prayer call on the occasion of the Ayodhya temple consecration has left social media users divided.
+While she faced severe criticism from liberal and left handles, people owing allegiance to right-wing Hindutva ideology are extending wholehearted support to the singer.
+Curiously, celebrities from the film and music world, except singer G Venugopal, have chosen to stay silent.In a video that went viral on social media, Chithra asked the faithful to chant hymns in praise of Lord Sree Rama and light five-wicked lamps around their homes on the consecration day.. </p>
+</section>
+<section>
+<figure>
+<img src="data:image/webp;base64,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" alt="K.S Chithra" width="300">
+<figcaption>Portrait of K.S Chitra</figcaption>
+</figure>
+</section>
+<section>
+<h3 id="works"> International Awards</h3>
+<ul>
+<li><span class="highlight">GOLDEN VOICE OF INDIA-2001</span></li>
+<li>MTV Video Music Award-2009</li>
+<li>Publishing Social Commentaries</li>
+<h4 id="works">National Awards</h4>
+<li>Padma Bhusan-2021</li>
+<li>Padma Sri-2005</li>
+</ul>
+</article>
+<aside id="links">
+<h3>Related Links</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/K._S._Chithra"
+target="_blank">K.S Chitra wikipedia</a></li>
+<li><a href="https://www.youtube.com/@KSChithra"
+target="_blank">K.S Chitra youtube</a></li>
+<li><a href="#">K.S Chitra</a></li>
+</ul>
+</aside>
+</main>
+<footer>
+<p>&copy; 2025 K.S Chithra Blog | Built with HTML5 Semantic Elements</p>
+</footer>
 </body>
 </html>
