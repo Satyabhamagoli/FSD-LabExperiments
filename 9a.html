@@ -7,21 +7,17 @@
     <h3><b>Number Operations</b></h3>
     <button onclick="performOperations()">Enter Number</button>
     <p id="result"></p>
-
     <script>
         function performOperations() {
             let num = parseInt(prompt("Enter a number:"));
             let output = "";
-
             if (isNaN(num) || num <= 0) {
                 document.getElementById("result").innerHTML = "Please enter a valid positive number.";
                 return;
             }
-
             output += "<b>1️⃣ Factorial of " + num + ":</b><br>" + factorial(num) + "<br><br>";
             output += "<b>2️⃣ Fibonacci Series up to " + num + ":</b><br>" + fibonacci(num).join(", ") + "<br><br>";
             output += "<b>3️⃣ Prime Numbers up to " + num + ":</b><br>" + primeNumbers(num).join(", ") + "<br><br>";
-
             if (isPalindrome(num)) {
                 output += "<b>4️⃣ " + num + " is a Palindrome Number.</b>";
             } else {
@@ -30,7 +26,6 @@
 
             document.getElementById("result").innerHTML = output;
         }
-
         function factorial(n) {
             let fact = 1;
             for (let i = 1; i <= n; i++) {
@@ -63,7 +58,6 @@
             }
             return primes;
         }
-
         function isPalindrome(n) {
             let str = n.toString();
             let rev = str.split("").reverse().join("");
@@ -72,3 +66,4 @@
     </script>
 </body>
 </html>
+
