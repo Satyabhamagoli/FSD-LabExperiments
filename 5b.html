@@ -1,38 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Fixed & Tilted Demo</title>
-    <style>
-        body {
-            height: 2000px;
-            margin: 0;
-            position: relative;
-            background-color: #f0f0f0; 
-        }      
-        body::before {
-            content: "";
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            width: 200px;
-            height: 200px;
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR6DRD5G9pU8_DhlWpWsNiyQPDPfEn1VwpGw&s') no-repeat center;
-            background-size: cover;
-            transform: translate(-50%, -50%) rotate(20deg);
-            pointer-events: none;
-            z-index: -1;
-        }
-        h1, p {
-            text-align: center;
-            margin-top: 100px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>CSS Color References</title>
+<style>
+.color-box { width: 150px; height: 50px; margin: 10px; line-height: 50px; color: white; text-align: center; font-weight: bold;
+}
+.color-name { background-color: red; } /* Color name */
+.color-hex { background-color: #00FF00; } /* Hex code */ .color-rgb { background-color: rgb(0, 0, 255); } /* RGB */
+.color-rgba { background-color: rgba(255, 165, 0, 0.7); } /* RGBA with transparency */
+.color-hsl { background-color: hsl(300, 100%, 50%); } /* HSL */ </style>
 </head>
 <body>
-    <h1>Background Image Fixed & Tilted Demo</h1>
-    <p>Scroll the page to see the tilted image remain fixed halfway down.</p>
+<h2>CSS Color References</h2>
+<div class="color-box color-name">Red</div>
+<div class="color-box color-hex">#00FF00</div>
+<div class="color-box color-rgb">RGB(0,0,255)</div>
+<div class="color-box color-rgba">RGBA(255,165,0,0.7)</div>
+<div class="color-box color-hsl">HSL(300,100%,50%)</div>
 </body>
 </html>
